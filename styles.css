@@ -79,9 +79,12 @@ button.notification {
 button.notification:active,
 .profile-container .avatar-image:active,
 .profile-container .user-name:active,
-.button-option:active {
-    -webkit-transform: scale(0.97);
-    transform: scale(0.97);
+.button-option:active,
+.favorite:active,
+.visibility:active,
+.share:active {
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
 }
 
 .avatar-image {
@@ -120,7 +123,7 @@ button.notification:active,
 
 span.name {
     font-size: 1.3rem;
-    font-weight: 600;
+    font-weight: bolder;
 }
 
 .button-container {
@@ -151,9 +154,15 @@ span.name {
     padding: 10px 30px;
 }
 
-.title {
-    font-size: 2rem;
-    text-align: center;
+.sidebar-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar-title .material-symbols-outlined,
+.sidebar-title .title {
+    font-size: 2rem ;
     color: var(--white-color);
 }
 
@@ -172,7 +181,10 @@ span.name {
 }
 
 .nav-option {
-    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.3rem;
     font-weight: 600;
     color: var(--white-color);
     text-decoration: none;
@@ -213,17 +225,33 @@ span.name {
     padding: 16px 32px;
     border-left: 12px solid var(--card-border-color);
     border-radius: 12px;
+    display: grid;
+    grid-template-rows: 1fr min-content;
 }
 
-.card .title {
+.card .card-title {
     color: black;
+    margin-bottom: -10px;
+    cursor: pointer;
 }
 
 .card .text {
+    color: var(--grey-color-text);
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 4; /* number of lines to show */
     -webkit-box-orient: vertical;
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 24px;
+}
+
+.actions .material-symbols-outlined {
+    cursor: pointer;
 }
 
 .announcements-area {
@@ -235,16 +263,16 @@ span.name {
     width: 24ch;
     border-radius: 12px;
     display: grid;
-    grid-auto-rows: auto;
+    grid-auto-rows: 1fr;
     background-color: var(--white-color);
     padding: 10px 24px;
 }
 
 .new-announcement {
-    margin-bottom: 12px;
+    margin-bottom: 16px;
     overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 5; /* number of lines to show */
+    -webkit-line-clamp: 4; /* number of lines to show */
     -webkit-box-orient: vertical;
 }
 
