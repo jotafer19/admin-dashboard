@@ -258,18 +258,15 @@ span.name {
     width: 24ch;
     border-radius: 12px;
     display: grid;
+    align-items: center;
     grid-auto-rows: 1fr;
     background-color: var(--white-color);
-    padding: 10px 24px;
+    padding: 6px 24px;
     box-shadow: var(--card-shadow);
 }
 
 .new-announcement {
-    margin-bottom: 16px;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 4; /* number of lines to show */
-    -webkit-box-orient: vertical;
+    padding-bottom: 16px;
 }
 
 .announcement-title {
@@ -281,6 +278,18 @@ span.name {
 .new-announcement .text {
     font-size: 0.7rem;
     color: var(--grey-color-text);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
+.read-more {
+    font-size: 0.7rem;
+}
+
+.read-more:visited {
+    color: initial;
 }
 
 .trending-area {
