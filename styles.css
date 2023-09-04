@@ -180,6 +180,10 @@ span.name {
     text-decoration: none;
 }
 
+.nav-option span:last-child:hover {
+    text-decoration: underline;
+}
+
 .nav-option:visited {
     color: var(--white-color);
 }
